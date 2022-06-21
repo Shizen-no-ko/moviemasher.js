@@ -48,6 +48,8 @@
     "publish-core": "npm publish --access public --workspace @moviemasher/moviemasher.js",
     "publish-server": "npm publish --access public --workspace @moviemasher/server-express",
     "start": "pm2 start workspaces/example-express-react/dist/server.js",
+    "start-test": "nodemon start workspaces/example-express-react/src/server.js",
+    "start-client-react-test": "nodemon start workspaces/example-express-react/src/server.js",
     "stop": "pm2 delete workspaces/example-express-react/dist/server.js",
     "test-help": "jest -h",
     "test-verbose": "jest --verbose --coverage --config dev/test/jest.config.js",
@@ -80,5 +82,8 @@
   "workspaces": [
     "workspaces/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "nodemon": "^2.0.16"
+  }
 }

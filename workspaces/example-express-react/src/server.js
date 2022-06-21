@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'path';
 import { Host, DefaultHostOptions, expandToJson } from '@moviemasher/server-express'
 
 const configuration = process.argv[2] || path.resolve(__dirname, './server-config.json')
